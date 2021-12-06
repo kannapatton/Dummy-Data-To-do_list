@@ -13,8 +13,17 @@
     <button onclick="fetchTodos()">Fetch Todos</button>
     <button onclick="logTodos()">Log Todos</button>
     <button onclick="populateTodos()">Populate Todos</button>
+    <form>
+        <label for="number input"> Number</label>
+        <input type="number" id="number input" min="1" max="10">
+        <button onclick="filterTodos()" type="button" name="button">Filter Todos by UserId</button>
+        <button onclick="resetTodos()" type="button" name="button">Reset</button>
+    </form>
+    <button onclick="completedTodos()">Complete</button>
+    <button onclick="notCompletedTodos()">Not Complete</button>
+    </body>
     <ol id="todo-list">
     </ol>
-</body>
+
 
 </html>

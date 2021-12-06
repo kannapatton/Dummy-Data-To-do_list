@@ -46,7 +46,38 @@ const populateTodos = () => {
 
 
 }
+const filterTodos = () => {
+    let todoList = document.getElementById("todo-list");
+    const num = document.getElementById("number input").value;
+    const arrayFilter = arrayOfTodos.filter(array => array.userId == num);
 
+    for (let i = 0; i < arrayFilter.length; i++) {
+        let todoItem = document.createElement("LI");
+        todoItem.innerHTML = " <b>User:</b> " + arrayFilter[i].userId + ", <b>Title:</b> " + array.Filter[i].title + ", <b>Completed:</b> " + arrayFilter[i].completed;
+        todoList.appendChild(todoItem);
+    }
+}
+const completedTodos = () => {
+    let todoList = document.getElementById("todo-list");
+    const arrayFilter = arrayOfTodos.filter(array => array.completed === true);
+    for (let i = 0; i < arrayFilter.length; i++) {
+        let todoItem = document.createElement("LI");
+        todoItem.innerHTML = " <b>User:</b> " + arrayFilter[i] + ", <b>Title:</b> " + array.Filter[i].title + ", <b>completed:</b> " + arrayFilter[i].completed;
+        todoList.appendChild(todoItem);
+    }
+}
+const notCompletedTodos = () => {
+    let todoList = arrayOfTodos.filter(array => array.completed === false);
+    for (let i = 0; i < arrayFilter.length; i++) {
+        let todoItem = document.createElement("LI");
+        todoItem.innerHtML = "<b>User:</b> " + arrayFilter[i].userId + ", <b>Title:</b> " + arrayFilter[i].title + ", <b>Completed:</b> " + arrayFilter[i].completed;
+        todoList.appendChild(todoItem);
+    }
+}
 
+const resetTodos = () => {
+    const listItems = documents.getElementByTagName("OL")
+    for (i = 0; i < listItems[i].innerHTML = null)
+}
 
 
